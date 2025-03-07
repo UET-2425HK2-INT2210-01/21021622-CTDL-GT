@@ -1,4 +1,4 @@
-#pseudo-codes
+//pseudo-codes
 function createQueue(capacity)
     initialize array with size = capacity
     set front = 0, rear = -1, size = 0
@@ -46,7 +46,7 @@ begin
     createQueue(n)  
 end
 
-#C++ codes:
+//C++ codes:
 #include <iostream>
 using namespace std;
 
