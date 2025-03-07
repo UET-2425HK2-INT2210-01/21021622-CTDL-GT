@@ -27,14 +27,14 @@ public:
         delete temp;
     }
 
-    void print(Node* node) {
+    void printReverse(Node* node) {
         if (!node) return;
-        print(node->next);
+        printReverse(node->next);
         cout << node->data << " ";
     }
     
     void print() {
-        print(top);
+        printReverse(top);
     }
 };
 
