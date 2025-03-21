@@ -1,0 +1,5 @@
+1. What are two desirable properties of a hash function?
+
+Hai thuộc tính mong muốn của một hàm băm là:  
+1. Tính đồng đều: Hàm băm nên phân phối các khóa đầu vào một cách đồng đều trên không gian băm để giảm thiểu va chạm (collisions). Điều này giúp cải thiện hiệu suất truy xuất dữ liệu và tránh tình trạng nhiều khóa bị ánh xạ vào cùng một vị trí.  
+2. Tính xác định: Cùng một đầu vào luôn phải tạo ra cùng một giá trị băm. Điều này đảm bảo tính nhất quán khi tra cứu hoặc lưu trữ dữ liệu trong cấu trúc dữ liệu sử dụng băm, như bảng băm (hash table).
