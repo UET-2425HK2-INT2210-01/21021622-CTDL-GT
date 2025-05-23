@@ -1,0 +1,47 @@
+1.  Biểu thức: /<[^>]+>/
+    Các chuỗi khớp:
+        <with attribute=”77”>
+        </closedtag>
+        <and xml tag>
+    Khớp thẻ: bắt đầu bằng '<', theo sau là một hoặc nhiều ký tự không phải '>', kết thúc bằng '>'.
+
+2.  Biểu thức: /a.[bc]+/
+    Các chuỗi khớp:
+        abc
+        abbbbbbbb
+        azc
+        abcbcbcbc
+        azccbbbbcbccc
+    Khớp chuỗi: ký tự 'a', một ký tự bất kỳ ('.'), một hoặc nhiều ký tự 'b' hoặc 'c' ('[bc]+').
+
+3.  Biểu thức: /(very )+(fat )?(tall|ugly) man/
+    Các chuỗi khớp:
+        very very fat ugly man
+        very very very tall man
+    Khớp chuỗi: một/nhiều "very ", tùy chọn "fat ", rồi "tall" hoặc "ugly", cuối cùng là " man".
+
+4.  Regex cho dạng “abc.def.ghi.jkx”
+    Regex đúng: ^.{3}\..{3}\..{3}\..{3}$
+    - ^: Bắt đầu chuỗi.
+    - .{3}: Ba ký tự bất kỳ.
+    - \.: Ký tự dấu chấm ('.') theo nghĩa đen.
+    - $: Kết thúc chuỗi.
+    Cấu trúc lặp lại: 3 ký tự bất kỳ, sau đó là dấu chấm, tổng cộng 4 nhóm ký tự.
+
+5.  Regex cho số điện thoại
+    Regex: ^(\([0-9]{3}\)|[0-9]{3})[ .-]?[0-9]{3}[ .-]?[0-9]{4}$
+    - ^: Bắt đầu chuỗi.
+    - (\([0-9]{3}\)|[0-9]{3}): Ba chữ số (trong dấu '()' hoặc không).
+    - [ .-]?: Tùy chọn (0 hoặc 1 lần): dấu cách, '.' hoặc '-'.
+    - [0-9]{3}: Ba chữ số.
+    - [0-9]{4}: Bốn chữ số.
+    - $: Kết thúc chuỗi.
+
+6.  Regex kiểm tra chuỗi
+    Regex đúng: ^[a-zA-Z0-9]+(?:[_\- ][a-zA-Z0-9]+)*$
+    - ^: Bắt đầu chuỗi.
+    - [a-zA-Z0-9]+: Một hoặc nhiều ký tự chữ/số (khối đầu tiên).
+    - (?: ... )*: Lặp lại 0 hoặc nhiều lần nhóm sau:
+        - [_\- ]: Một dấu phân cách ('_', '-', hoặc dấu cách).
+        - [a-zA-Z0-9]+: Một hoặc nhiều ký tự chữ/số (khối tiếp theo).
+    - $: Kết thúc chuỗi.
